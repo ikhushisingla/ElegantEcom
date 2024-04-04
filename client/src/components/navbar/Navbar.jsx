@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import logo from "@/components/assets/logo.png"
 import cart_icon from "@/components/assets/cart_icon.png"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Navbar = () => {
     const [menu,setMenu]=useState("shop")
@@ -13,14 +14,15 @@ const Navbar = () => {
                 <p className='font-semibold text-lg'>3LEGANT</p>
             </div>
             <div className='flex gap-10 cursor-pointer'>
-                <p onClick={() => { setMenu("shop") }}>Shop{ menu==="shop"?<hr/>:<></>}</p>
-                <p onClick={()=>{setMenu("Women")}}>Women { menu==="Women"?<hr/>:<></>}</p>
-                <p onClick={()=>{setMenu("Men")}}>Men { menu==="Men"?<hr/>:<></>}</p>
-                <p onClick={()=>{setMenu("Kids")}}>Kids { menu==="Kids"?<hr/>:<></>}</p>
+                <p onClick={() => { setMenu("shop") }}><Link href="/">Shop</Link>{ menu==="shop"?<hr/>:<></>}</p>
+                <p onClick={()=>{setMenu("Women")}}><Link href="/women">Women</Link> { menu==="Women"?<hr/>:<></>}</p>
+                <p onClick={()=>{setMenu("Men")}}><Link href="/men">Men</Link> { menu==="Men"?<hr/>:<></>}</p>
+                <p onClick={()=>{setMenu("Kids")}}><Link href="/kid">Kids</Link> { menu==="Kids"?<hr/>:<></>}</p>
             </div>
             <div className='flex gap-3'>
-                <button className=' text-lg border border-solid-1 rounded-full px-4'>Login</button>
-                <Image src={cart_icon} alt='img' className='w-8' />
+                <Link href="/login"><button className=' text-lg border border-solid-1 rounded-full px-4'>Login</button></Link>
+                <Link href="/cart"><Image src={cart_icon} alt='img' className='w-8' /></Link>
+                
                 <div className='w-5 h-5 flex justify-center items-center -ml-5 -mt-2 text-white bg-red-500 border rounded-full'>0</div>
             </div>
       </div>
