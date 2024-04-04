@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import data_product from '../assets/data'
 import Item from '../item/Item'

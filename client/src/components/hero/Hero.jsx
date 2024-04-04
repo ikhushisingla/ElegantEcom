@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
 import hand_icon from "@/components/assets/hand_icon.png"
@@ -18,7 +20,7 @@ const Hero = () => {
               </div>
               <div>
                   <div className='flex justify-center items-center gap-4 w-80 h-20 mt-7 border border-r-2 border-black rounded-full '>
-                      <p className='text-2xl'> Latest collections</p>
+                      <p className='text-2xl cursor-pointer'> Latest collections</p>
                       <Image src={ arrow} alt='img'/>
                   </div>
               </div>
