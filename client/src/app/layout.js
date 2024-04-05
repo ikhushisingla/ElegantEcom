@@ -1,7 +1,8 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
-import Item from "@/components/item/Item";
+import Footer from "@/components/footer/Footer";
+import ShopContextProvider from "@/context/ShopContext";
 
 const inter = Poppins({ subsets: ["latin"], weight: "400" });
 
@@ -14,8 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
-        {children}
+        <ShopContextProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ShopContextProvider>
       </body>
     </html>
   );
