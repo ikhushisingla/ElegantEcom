@@ -1,4 +1,4 @@
-import ShopCategory from "@/screens/ShopCategory";
+import ShopCategory from "@/screens/shopcategory";
 import React from "react";
 import men_banner from "@/components/assets/banner_mens.png";
 

@@ -1,10 +1,10 @@
 "use client";
-import Footer from "@/components/footer/Footer";
-import Hero from "@/components/hero/Hero";
-import NewCollection from "@/components/newcollection/NewCollection";
-import Newsletter from "@/components/newsletter/Newsletter";
-import Offer from "@/components/offer/Offer";
-import Popular from "@/components/popular/Popular";
+import Footer from "@/components/footer/footer";
+import Hero from "@/components/hero/hero";
+import NewCollection from "@/components/newcollection/newcollection";
+import Newsletter from "@/components/newsletter/newsletter";
+import Offer from "@/components/offer/offer";
+import Popular from "@/components/popular/popular";
 import React from "react";
 
 const Shop = () => {
