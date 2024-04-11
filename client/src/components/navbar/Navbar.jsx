@@ -1,13 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "@/assets/logo.png";
 import cart_icon from "@/assets/cart_icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ShopContext } from "@/context/ShopContext";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const {totalCartItem}=useContext(ShopContext)
   return (
     <div className="flex justify-around items-center">
       <div className="flex items-center gap-3">
@@ -37,7 +39,7 @@ const Navbar = () => {
         </Link>
 
         <div className="w-5 h-5 flex justify-center items-center -ml-5 -mt-2 text-white bg-red-500 border rounded-full">
-          0
+          {totalCartItem()}
         </div>
       </div>
     </div>

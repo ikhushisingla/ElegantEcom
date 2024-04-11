@@ -7,7 +7,7 @@ import p_icon from "@/assets/pintester_icon.png"
 import w_icon from "@/assets/whatsapp_icon.png"
 const Footer = () => {
     return (
-      <div>
+      <div >
             <div className='flex flex-col justify-evenly mt-12 items-center gap-6'>
                 <div className='flex justify-center items-center gap-4'>
                     <Image src={footer_logo} alt='img' />

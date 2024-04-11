@@ -8,7 +8,7 @@ const Item = (props) => {
   return (
     <div className="w-fit m-2 transition-all duration-300 hover:scale-110">
       <Link href={`/product/${props.id}`}>
-        <Image onClick={window.scrollTo(0,0)} src={props.image} alt="img" className="w-60" />
+        <Image src={props.image} alt="img" className="w-60" />
       </Link>
       <p className="mt-2 mb-2 font-semibold text-lg">{props.name}</p>
       <div className="flex gap-5">

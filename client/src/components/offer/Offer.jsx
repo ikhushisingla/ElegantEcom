@@ -13,7 +13,7 @@ const Offer = () => {
               <button className='border border-black w-28 rounded-full mt-3 ml-20'>Check Now</button>
           </div>
           <div className='flex-1 flex items-center justify-end pt-3'>
-              <Image src={exclusive_img}/>
+              <Image src={exclusive_img} alt='img'/>
           </div>
     </div>
   )
