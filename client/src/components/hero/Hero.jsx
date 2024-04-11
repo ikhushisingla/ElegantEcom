@@ -2,9 +2,9 @@
 
 import Image from 'next/image'
 import React from 'react'
-import hand_icon from "@/components/assets/hand_icon.png"
-import arrow from "@/components/assets/arrow.png"
-import hero_image from "@/components/assets/hero_image.png"
+import hand_icon from "@/assets/hand_icon.png"
+import arrow from "@/assets/arrow.png"
+import hero_image from "@/assets/hero_image.png"
 const Hero = () => {
   return (
       <div className='flex bg-gradient-to-b from-indigo-200 via-purple-200 to-pink-50'>

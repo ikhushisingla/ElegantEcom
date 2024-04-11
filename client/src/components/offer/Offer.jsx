@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import exclusive_img from "@/components/assets/exclusive_image.png"
+import exclusive_img from "@/assets/exclusive_image.png"
 import Image from 'next/image'
 
 const Offer = () => {

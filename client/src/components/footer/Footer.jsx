@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import footer_logo from "@/components/assets/logo_big.png"
-import ig_icon from "@/components/assets/instagram_icon.png"
-import p_icon from "@/components/assets/pintester_icon.png"
-import w_icon from "@/components/assets/whatsapp_icon.png"
+import footer_logo from "@/assets/logo_big.png"
+import ig_icon from "@/assets/instagram_icon.png"
+import p_icon from "@/assets/pintester_icon.png"
+import w_icon from "@/assets/whatsapp_icon.png"
 const Footer = () => {
     return (
       <div>

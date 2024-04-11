@@ -1,5 +1,5 @@
 import React from "react";
-import kid_banner from "@/components/assets/banner_kids.png";
+import kid_banner from "@/assets/banner_kids.png";
 import ShopCategory from "@/screens/shopcategory";
 
 const Page = () => {

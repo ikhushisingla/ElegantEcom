@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import logo from "@/components/assets/logo.png";
-import cart_icon from "@/components/assets/cart_icon.png";
+import logo from "@/assets/logo.png";
+import cart_icon from "@/assets/cart_icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

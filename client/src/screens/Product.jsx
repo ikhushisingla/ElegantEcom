@@ -2,6 +2,8 @@
 
 import Breadcrums from '@/components/breadcrums/Breadcrums'
 import Productdisplay from '@/components/productdisplay/productdisplay'
+import Descriptionbox from "@/components/description/descriptionbox"
+import RelatedProduct from '@/components/relatedproduct/relatedProduct'
 import { ShopContext } from '@/context/ShopContext'
 import { useParams } from 'next/navigation'
 import React, { useContext } from 'react'
@@ -13,7 +15,9 @@ const Product = () => {
   return (
     <div>
       <Breadcrums product={product} />
-      <Productdisplay product={ product} />
+      <Productdisplay product={product} />
+      <Descriptionbox />
+      <RelatedProduct/>
     </div>
   )
 }

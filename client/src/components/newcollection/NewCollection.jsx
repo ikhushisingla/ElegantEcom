@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import new_collections from "../assets/new_collections";
+import new_collections from "../../assets/new_collections";
 import Item from "../item/Item";
 
 const NewCollection = () => {

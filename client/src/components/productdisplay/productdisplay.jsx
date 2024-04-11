@@ -1,12 +1,12 @@
 import React from "react";
 import Image from 'next/image'
-import star from "@/components/assets/star_icon.png"
-import star_dull from "@/components/assets/star_dull_icon.png"
+import star from "@/assets/star_icon.png"
+import star_dull from "@/assets/star_dull_icon.png"
 const Productdisplay = (props) => {
   const {product}=props
   return (
     <div className="flex justify-evenly mt-6">
-      <div className="flex gap-4 ml-32">
+      <div className="flex gap-4 lg:ml-10">
         <div className="flex flex-col gap-4">
           <Image src={product.image} alt="img" className="h-32 w-28"/>
           <Image src={product.image} alt="img" className="h-32 w-28"/>
