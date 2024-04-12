@@ -6,6 +6,10 @@ import p5_img from "./product_15.png";
 import p6_img from "./product_2.png";
 import p7_img from "./product_17.png";
 import p8_img from "./product_28.png";
+import p9_img from "./product_9.png";
+import p10_img from "./product_10.png";
+import p11_img from "./product_11.png";
+import p12_img from "./product_12.png";
 
 let new_collections = [
   {
@@ -31,7 +35,7 @@ let new_collections = [
   },
   {
     id: 8,
-    name: "Peplum Hem Blouse",
+    name: "Peplum Hem",
     image: p4_img,
     new_price: 100.0,
     old_price: 150.0,
@@ -63,6 +67,38 @@ let new_collections = [
     image: p8_img,
     new_price: 100.0,
     old_price: 150.0,
+  },
+  {
+    id: 9,
+    name: "Peplum ",
+    category: "women",
+    image: p9_img,
+    new_price: 85.0,
+    old_price: 120.5,
+  },
+  {
+    id: 10,
+    name: "Hoodie",
+    category: "women",
+    image: p10_img,
+    new_price: 85.0,
+    old_price: 120.5,
+  },
+  {
+    id: 11,
+    name: "Tank top",
+    category: "women",
+    image: p11_img,
+    new_price: 85.0,
+    old_price: 120.5,
+  },
+  {
+    id: 12,
+    name: "FullSleeve Top",
+    category: "women",
+    image: p12_img,
+    new_price: 85.0,
+    old_price: 120.5,
   },
 ];
 

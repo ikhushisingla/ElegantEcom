@@ -8,8 +8,8 @@ const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
   return (
     <div>
-      <Image src={props.banner} alt="img" className="block ml-auto mr-auto mt-8 mb-8 w-4/5" />
-      <div className="flex ml-40 mr-40 justify-between items-center">
+      <Image src={props.banner} alt="img" className="block ml-auto mr-auto mt-8 mb-8" />
+      <div className="flex ml-24 mr-24 justify-between items-center">
         <p className="text-xl text-slate-500">
           <span className="text-2xl font-semibold text-slate-500">Showing 1-12 </span>out of 36
           products
@@ -18,7 +18,7 @@ const ShopCategory = (props) => {
           Sort by <Image src={dropdown} alt="img" className="h-2" />
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-5 lg:ml-20 mt-3">
+      <div className="grid grid-cols-6 gap-3 mt-3">
         {all_product.map((ele, idx) => {
           if (props.category === ele.category) {
             return (

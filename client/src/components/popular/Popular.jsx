@@ -9,7 +9,7 @@ const Popular = () => {
     <div className="flex flex-col items-center gap-3">
       <h1 className="text-3xl font-semibold mt-3">Popular in Women</h1>
       <hr className="w-52" />
-      <div className="mt-6 flex gap-8">
+      <div className="mt-6 grid grid-cols-6">
         {data_product.map((ele, idx) => {
           return (
             <Item

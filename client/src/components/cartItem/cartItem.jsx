@@ -8,7 +8,7 @@ import './cartItem.css'
 const CartItem = () => {
   const {all_product,cartItem,removeFromCart,totalCartAmount}=useContext(ShopContext)
   return (
-    <div className='mt-24 mb-24 ml-40'>
+    <div className='mt-24 mb-24 lg:ml-10 md:overflow-x-hidden md:ml-6 md:mr-3'>
       <div class="tablename">
         <p>Products</p>
         <p>Title</p>
@@ -56,14 +56,14 @@ const CartItem = () => {
           <button className='outline-none border hover:bg-slate-100 h-14 w-64 font-semibold'>Proceed to checkout</button>
         </div>
 
-        <div className='flex flex-col gap-3 mr-10 items-center '>
+        <div className='flex flex-col lg:gap-3 lg:mr-28 items-center md:gap-2'>
         <p className='text-xl font-semibold'>If you have a promo code enter it here</p>
-        <div className="flex items-center justify-between border h-12 bg-slate-50">
+        <div className="flex items-center justify-between border h-12 bg-slate-50 ">
         <input
           placeholder="Promo"
-          className=" w-52 focus:outline-none ml-4 bg-transparent"
+          className=" lg:w-56 md:w-32 md:mr-9 lg:mr-2 focus:outline-none ml-4 bg-transparent"
         />
-              <button className="cursor-pointer w-32 h-12 bg-black
+              <button className="cursor-pointer lg:w-32 h-12 md:w-28  bg-black
          border-l-2 border-black  text-white">Enter</button>
       </div>
         </div>

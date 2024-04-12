@@ -5,10 +5,10 @@ import data_product from '@/assets/data'
 import Item from '../item/Item'
 const relatedProduct = () => {
   return (
-      <div className='flex flex-col items-center gap-3 h-[90vh] mt-8'>
+      <div className='flex flex-col items-center gap-3 mt-6 '>
           <h1 className='text-2xl font-bold'>Related Products</h1>
           <hr className='w-48 h-2' />
-          <div className='mt-12 flex gap-7'>
+          <div className='mt-12 grid grid-cols-6 md:grid-cols-6'>
               {data_product.map((ele,idx) => {
                   return (
                       <Item key={idx}

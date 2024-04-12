@@ -5,13 +5,13 @@ import Item from "../item/Item";
 
 const NewCollection = () => {
   return (
-    <div className="mt-8 ml-24">
+    <div className="mt-8 mx-auto flex items-center justify-center flex-col">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-3xl font-semibold">New Collections</h1>
         <hr className="w-60" />
       </div>
 
-      <div className="grid grid-cols-4 mt-4">
+      <div className="grid grid-cols-6 mt-4 ">
         {new_collections.map((ele, idx) => {
           return (
             <Item

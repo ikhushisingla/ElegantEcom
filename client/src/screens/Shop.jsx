@@ -9,7 +9,7 @@ import React from "react";
 
 const Shop = () => {
   return (
-    <div>
+    <div className="mx-auto w-full">
       <Hero />
       <Popular />
       <Offer />

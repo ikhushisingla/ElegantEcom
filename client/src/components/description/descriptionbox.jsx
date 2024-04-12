@@ -6,8 +6,8 @@ const descriptionbox = () => {
   return (
     <div className='flex flex-col lg:ml-36 lg:mr-36 mt-14'>
       <div className='flex'>
-        <div className='flex items-center justify-center text-xl w-40 h-16 border border-solid-2'>Description</div>
-        <div className='flex flex-row items-center justify-center text-xl w-44 h-16 border border-solid-2 bg-slate-50'>Reviews 122</div>
+        <div className='flex items-center justify-center text-xl md:w-40 md:h-16 sm:w-36 sm:h-10 border border-solid-2'>Description</div>
+        <div className='flex flex-row items-center justify-center text-xl md:w-44 md:h-16 sm:w-36 sm:h-10 border border-solid-2 bg-slate-50'>Reviews 122</div>
       </div>
       <div className='flex flex-col gap-6 border border-r-2 p-12'>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium architecto iusto consectetur eveniet totam dolor culpa, unde temporibus harum asperiores. Iusto saepe accusamus velit aperiam rerum voluptatum quas molestias voluptate!</p>
