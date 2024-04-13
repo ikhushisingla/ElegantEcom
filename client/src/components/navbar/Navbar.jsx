@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname();
   const {totalCartItem}=useContext(ShopContext)
   return (
-    <div className="flex justify-around items-center">
+    <div className="flex justify-around items-center shadow-md bg-white">
       <div className="flex items-center gap-3 sm:gap-1">
         <Image src={logo} alt="img" />
         <p className="font-semibold text-lg">3LEGANT</p>
