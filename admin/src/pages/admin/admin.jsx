@@ -1,10 +1,13 @@
-'use client'
-import React from 'react'
-
-const admin = () => {
+"use client";
+import React, { use } from "react";
+import Sidebar from "../../components/sidebar/Sidebar";
+const Admin = () => {
   return (
-    <div>admin</div>
-  )
-}
+    <div className="flex">
+      <Sidebar />
 
-export default admin
+    </div>
+  );
+};
+
+export default Admin;
