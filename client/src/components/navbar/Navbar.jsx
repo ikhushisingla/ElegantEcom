@@ -1,13 +1,20 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
 import cart_icon from "@/assets/cart_icon.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShopContext } from "@/context/ShopContext";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  let [mounted, setMounted] = useState(false)
+  
+  useEffect(() => {
+    setMounted=true
+  }, [])
+  const router=useRouter()
   const pathname = usePathname();
   const {totalCartItem}=useContext(ShopContext)
   return (
@@ -31,9 +38,9 @@ const Navbar = () => {
         </p>
       </div>
       <div className="flex gap-3">
-        <Link href="/login">
+        {mounted && localStorage.getItem('auth-token') ? <button onClick={() => { !mounted && localStorage.removeItem('auth-token'); router.replace('/') }}>Log out</button> : <Link href='/login'>
           <button className=" text-lg border border-solid-1 rounded-full px-4">Login</button>
-        </Link>
+        </Link>}
         <Link href="/cart">
           <Image src={cart_icon} alt="img" className="w-8" />
         </Link>
