@@ -131,6 +131,11 @@ app.get('/allproduct', async (req, res) => {
   res.send(products)
 })
 
+//schema for creating user models
+const Users = mongoose.model('Users', {
+  
+})
+
 app.get("/", (req, res) => {
   res.send("Server is working!!");
 });
@@ -138,3 +143,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
+
+
