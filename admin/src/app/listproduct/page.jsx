@@ -1,10 +1,8 @@
-import React from 'react'
-import Listproduct from '../../components/listproduct'
+import React from "react";
+import Listproduct from "../../components/listproduct";
 
 const page = () => {
-  return (
-    <Listproduct/>
-  )
-}
+  return <Listproduct />;
+};
 
-export default page
+export default page;

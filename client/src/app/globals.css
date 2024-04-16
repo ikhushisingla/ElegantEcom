@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.h{
-    border: 1px solid red;
+.h {
+  border: 1px solid red;
 }

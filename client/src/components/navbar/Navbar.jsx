@@ -7,16 +7,21 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShopContext } from "@/context/ShopContext";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
-  let [mounted, setMounted] = useState(false)
-  
-  useEffect(() => {
-    setMounted=true
-  }, [])
-  const router=useRouter()
+  const router = useRouter();
   const pathname = usePathname();
-  const {totalCartItem}=useContext(ShopContext)
+  const { totalCartItem } = useContext(ShopContext);
+
+  const [authToken, setAuthToken] = useState(undefined);
+  useEffect(() => {
+    setAuthToken(localStorage.getItem("auth-token"));
+  }, []);
+  const handleLogout = () => {
+    localStorage.removeItem("auth-token");
+    router.replace("/");
+  };
   return (
     <div className="flex justify-around items-center shadow-md bg-white">
       <div className="flex items-center gap-3 sm:gap-1">
@@ -24,23 +29,27 @@ const Navbar = () => {
         <p className="font-semibold text-lg">3LEGANT</p>
       </div>
       <div className="flex gap-10 cursor-pointer">
-        <p className={pathname === "/" && "underline underline-offset-2"}>
+        <p className={cn(pathname === "/" && "underline underline-offset-2")}>
           <Link href="/">Shop</Link>
         </p>
-        <p className={pathname === "/women" && "underline underline-offset-2"}>
+        <p className={cn(pathname === "/women" && "underline underline-offset-2")}>
           <Link href="/women">Women</Link>
         </p>
-        <p className={pathname === "/men" && "underline underline-offset-2"}>
+        <p className={cn(pathname === "/men" && "underline underline-offset-2")}>
           <Link href="/men">Men</Link>
         </p>
-        <p className={pathname === "/kid" && "underline underline-offset-2"}>
+        <p className={cn(pathname === "/kids" && "underline underline-offset-2")}>
           <Link href="/kid">Kids</Link>
         </p>
       </div>
       <div className="flex gap-3">
-        {mounted && localStorage.getItem('auth-token') ? <button onClick={() => { !mounted && localStorage.removeItem('auth-token'); router.replace('/') }}>Log out</button> : <Link href='/login'>
-          <button className=" text-lg border border-solid-1 rounded-full px-4">Login</button>
-        </Link>}
+        {authToken ? (
+          <button onClick={handleLogout}>Log out</button>
+        ) : (
+          <Link href="/login">
+            <button className=" text-lg border border-solid-1 rounded-full px-4">Login</button>
+          </Link>
+        )}
         <Link href="/cart">
           <Image src={cart_icon} alt="img" className="w-8" />
         </Link>
