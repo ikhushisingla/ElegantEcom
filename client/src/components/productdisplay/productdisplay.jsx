@@ -11,23 +11,23 @@ const Productdisplay = (props) => {
     <div className=" flex justify-evenly mt-6 lg:gap-5 md:ml-20 md:gap-12 sm:ml-16 sm:gap-6">
       <div className="flex gap-4 lg:ml-10 sm:gap-2">
         <div className="flex flex-col gap-4 sm:gap-2">
+          <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20" width={40} height={40}/>
+          <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20" width={40} height={40}/>
           <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20"/>
-          <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20"/>
-          <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20"/>
-          <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20"/>
+          <Image src={product.image} alt="img" className="h-32 w-28 md:h-24 md:w-24 sm:w-20 sm:h-20" width={40} height={40}/>
         </div>
         <div>
-          <Image src={product.image} alt="img" className="h-[560px] w-[450px] md:h-[410px] sm:h-[344px] sm:w-[300px]"/>
+          <Image src={product.image} alt="img" className="h-[560px] w-[450px] md:h-[410px] sm:h-[344px] sm:w-[300px]" width={80} height={80}/>
         </div>
       </div>
       <div className="flex flex-col lg:gap-3 md:gap-1 sm:gap-1">
         <h1 className="text-4xl md:text-2xl font-bold sm:text-xl">{product.name}</h1>
         <div className="flex gap-1 items-center mt-6 md:mt-1 sm:mt-0">
-          <Image src={star } alt="img" />
-          <Image src={star } alt="img" />
-          <Image src={ star} alt="img" />
-          <Image src={ star} alt="img" />
-          <Image src={star_dull} alt="img" />
+          <Image src={star } alt="img" width={20} height={20}/>
+          <Image src={star } alt="img" width={20} height={20}/>
+          <Image src={ star} alt="img" width={20} height={20}/>
+          <Image src={ star} alt="img" width={20} height={20}/>
+          <Image src={star_dull} alt="img" width={20} height={20}/>
           <p className="text-lg ml-2 md:text-md sm:text-md">122 Reviews</p>
         </div>
         <div className="flex gap-3 mt-4 items-center md:mt-2 sm:mt-0">

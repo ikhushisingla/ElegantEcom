@@ -196,6 +196,58 @@ app.post("/login", async (req, res) => {
   }
 });
 
+
+//creating endpoints for newCollectionData
+app.get("/newcollection", async (req, res) => {
+  let products = await Product.find({});
+  let newCollection = products.slice(1).slice(-12);
+  console.log("New collection fetched");
+  res.send(newCollection);
+})
+
+//creating endpoint for popular in women
+app.get("/popularinwomen", async (req, res) => {
+  let products = await Product.find({ category: "women" });
+  let popularinwomen = products.slice(0, 6);
+  console.log("Popular in women fetched");
+  res.send(popularinwomen)
+})
+
+//creating middleware to fetch user
+const fetchUser = async (req,res,next) => {
+  const token = req.header("auth-token");
+  if (!token) {
+    res.status(401).send({errors:"Please authenticate using valid token"})
+  } else {
+    try {
+      const data = jwt.verify(token, "secret_ecom");
+      req.user = data.user;
+      next();
+    } catch (err) {
+      res.status(401).send({errors:"Please authenticate using valid token"})
+    }
+  }
+}
+
+//creating endpoint for adding product in cart
+app.post("/addtocart", fetchUser ,async (req,res) => {
+  let userData = await User.findOne({ _id: req.user.id });
+  userData.cartData[req.body.itemId] += 1;
+  await User.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+  res.send("Added");
+})
+
+//creating endpoint for removing product in cart
+app.post("/removefromcart", fetchUser ,async (req,res) => {
+  let userData = await User.findOne({ _id: req.user.id });
+  if (userData.cartData[req.body.itemId] > 0) 
+  userData.cartData[req.body.itemId] -= 1;
+  await User.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+  res.send("Removed");
+})
+
+
+
 app.get("/", (req, res) => {
   res.send("Server is working!!");
 });

@@ -1,9 +1,16 @@
 "use client";
-import React from "react";
-import new_collections from "../../assets/new_collections";
+import React, { useEffect, useState } from "react";
+//import new_collections from "../../assets/new_collections";
 import Item from "../item/Item";
 
 const NewCollection = () => {
+  const [new_collection, setNewCollection] = useState([])
+  
+  useEffect(() => {
+    fetch("http://localhost:4000/newcollection")
+      .then((response) => response.json())
+      .then((data) => setNewCollection(data));
+  }, []);
   return (
     <div className="mt-8 mx-auto flex items-center justify-center flex-col">
       <div className="flex flex-col justify-center items-center">
@@ -12,7 +19,7 @@ const NewCollection = () => {
       </div>
 
       <div className="grid grid-cols-6 mt-4 ">
-        {new_collections.map((ele, idx) => {
+        {new_collection.map((ele, idx) => {
           return (
             <Item
               key={idx}

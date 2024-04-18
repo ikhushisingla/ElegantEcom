@@ -1,16 +1,23 @@
 "use client";
 
-import React from "react";
-import data_product from "../../assets/data";
+import React, { useState , useEffect } from "react";
+// import data_product from "../../assets/data";
 import Item from "../item/Item";
 
 const Popular = () => {
+  const [popular, setPopular] = useState([]);
+  
+  useEffect(() => {
+    fetch("http://localhost:4000/popularinwomen")
+      .then((response) => response.json())
+      .then((data) => setPopular(data));
+  }, []);
   return (
     <div className="flex flex-col items-center gap-3">
       <h1 className="text-3xl font-semibold mt-3">Popular in Women</h1>
       <hr className="w-52" />
       <div className="mt-6 grid grid-cols-6">
-        {data_product.map((ele, idx) => {
+        {popular.map((ele, idx) => {
           return (
             <Item
               key={idx}
